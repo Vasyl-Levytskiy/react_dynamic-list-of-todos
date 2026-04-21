@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from 'classnames';
 
 type Props = {
   status: 'all' | 'active' | 'completed';
@@ -47,11 +48,11 @@ export const TodoFilter: React.FC<Props> = ({
       </span>
 
       {query && (
-        <span className="icon is-right" style={{ pointerEvents: 'all' }}>
+        <span className="icon is-right">
           <button
             data-cy="clearSearchButton"
             type="button"
-            className="delete"
+            className={cn('delete')}
             onClick={onClearQuery}
           />
         </span>
